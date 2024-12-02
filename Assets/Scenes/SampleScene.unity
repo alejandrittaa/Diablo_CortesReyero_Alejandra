@@ -2503,7 +2503,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -15.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2709,6 +2709,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2763,6 +2768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3844,6 +3854,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3898,6 +3913,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4107,6 +4127,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4161,6 +4186,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7410,6 +7440,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7464,6 +7499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8257,6 +8297,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8311,6 +8356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10220,6 +10270,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10274,6 +10329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10590,6 +10650,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10644,6 +10709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16490,6 +16560,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644592375}
     m_Modifications:
+    - target: {fileID: 2715063111660659560, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4944463441945890542, guid: 817bfd855d38b694a861d638ffd4aa12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16544,6 +16619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antorcha
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275145560025763929, guid: 817bfd855d38b694a861d638ffd4aa12,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
