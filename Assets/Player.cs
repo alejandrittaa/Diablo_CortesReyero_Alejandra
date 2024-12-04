@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     {
         //indicamos que camara es la que tiene que tener en cuenta
         cam = Camera.main;
-        GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     
