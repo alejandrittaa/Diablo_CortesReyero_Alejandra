@@ -54,8 +54,8 @@ public class Player : MonoBehaviour
             //comprobar si ya hemos llegado a dicho destino (delante del npc)
             if(agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                //si hemos llegado, llamamos al metodo interacción de dentro del npc
-                npc.Interactuar();
+                //si hemos llegado, llamamos al metodo interacción de dentro del npc (se le mete el transform del player por parametro de entrada)
+                npc.Interactuar(this.transform);
                 //cuando ya has llegado, qutiamos el ultimo click que teniamos guardado, para solo interactuar una vez
                 ultimoClick = null;
             }
