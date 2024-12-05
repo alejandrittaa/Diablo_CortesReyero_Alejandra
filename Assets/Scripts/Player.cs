@@ -56,7 +56,13 @@ public class Player : MonoBehaviour
             {
                 //si hemos llegado, llamamos al metodo interacción de dentro del npc
                 npc.Interactuar();
+                //cuando ya has llegado, qutiamos el ultimo click que teniamos guardado, para solo interactuar una vez
+                ultimoClick = null;
             }
+        //si no hemos clickado en un npc, no necesitamos parar a ninguna distancia asi que lo dejamos a 0
+        }else if(ultimoClick)
+        {
+            agent.stoppingDistance = 0f;
         }
     }
 }
