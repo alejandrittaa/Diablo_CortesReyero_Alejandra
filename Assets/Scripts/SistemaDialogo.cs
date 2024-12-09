@@ -15,7 +15,7 @@ public class SistemaDialogo : MonoBehaviour
 
     //AWAKE:
         //Se ejecuta ANTES del Start, independientemente de que el gameObject este activo o no.
-            //Es decir, el patrón singleton se ejecuta en el Awake, porque para "empezar una clase, tiene que estar el profesor"          
+            //Es decir, el patrón singleton se ejecuta en el Awake, porque "para empezar una clase, tiene que estar el profesor"          
     void Awake()
     {
         //si el trono esta libre
@@ -31,9 +31,9 @@ public class SistemaDialogo : MonoBehaviour
         }
     }
 
-    public void InciarDialogo()
+    public void InciarDialogo(DialogoSO dialogo)
     {
-
+        
     }
 
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    [SerializeField] private DialogoSO miDialogo;
     [SerializeField] private float duracionRotacion;
     void Start()
     {
@@ -24,6 +25,6 @@ public class NPC : MonoBehaviour
 
     private void IniciarInteraccion()
     {
-        SistemaDialogo.sistema.InciarDialogo();
+        SistemaDialogo.sistema.InciarDialogo(miDialogo);
     }
 }
