@@ -17,7 +17,13 @@ public class NPC : MonoBehaviour
     public void Interactuar(Transform interactuador)
     {
         Debug.Log("Hola");
-        //esta sentencia indica a lo que tiene que mirar el NPC.
-        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y);
+        //esta sentencia hace que el ncp vaya rotando poco a poco a mirar al player, --
+        // -- y que cuando termine de girarse (OnComplete), se iniciara la interacción.
+        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
+    }
+
+    private void IniciarInteraccion()
+    {
+        SistemaDialogo.sistema.InciarDialogo();
     }
 }
