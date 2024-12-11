@@ -1042,6 +1042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1eb8d09739926640bc5e3a5b27e0bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marcoDialogo: {fileID: 1716699552}
+  textoDialogo: {fileID: 390139618}
 --- !u!1001 &125421857
 PrefabInstance:
   m_ObjectHideFlags: 0
