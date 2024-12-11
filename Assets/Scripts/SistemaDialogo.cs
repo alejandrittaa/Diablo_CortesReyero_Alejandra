@@ -44,6 +44,8 @@ public class SistemaDialogo : MonoBehaviour
 
     public void InciarDialogo(DialogoSO dialogo)
     {
+        //cuando inciamos el dialogo, dejamos de movernos, es decir, congelamos el tiempo
+        Time.timeScale = 0;
         //el diálogo actual que tenemos que tratar, es el que nos pasan por parámetro
         dialogoActual = dialogo;
         marcoDialogo.SetActive(true);
@@ -53,6 +55,10 @@ public class SistemaDialogo : MonoBehaviour
     //sirve para escribir la frase letra por letra
     private IEnumerator EscribirFrase()
     {
+        escribiendo = true;
+
+        //limpiamos el cuadro antes de escribir una nueva frase
+        textoDialogo.text = "";
         //demenuzo la frase actual en caracteres separados
         char[] fraseEnLetras = dialogoActual.frases[indiceFraseActual].ToCharArray();
 
@@ -60,25 +66,60 @@ public class SistemaDialogo : MonoBehaviour
         {
             //1. Incluir la letra por la que estes pasando en el texto. (+=, para que se acumulen y no se sobre escribian)
             textoDialogo.text += letra;
-            //2. Esperar 0.02sec
-            yield return new WaitForSeconds(0.02f);
+            //2. Esperar 0.02sec (WaitForSecondsRealtime, no se para si el tiempo está congelado)
+            yield return new WaitForSecondsRealtime(dialogoActual.tiempoEntreLetras);
         }
+
+        escribiendo = false;
     }
 
     //sirve para autocompletar la frase
     private void CompletarFrase()
     {
-
+        //si me piden completar la frase entera, en el texto pondremos la frase entera.
+        textoDialogo.text = dialogoActual.frases[indiceFraseActual];
+        //y paramos las corrutinas que puedan estar escribiendo la frase, y no me añada más texto
+        StopAllCoroutines();
+        //dejamos de escribir
+        escribiendo = false;
     }
 
-    private void SiguienteFrase()
+    public void SiguienteFrase()
     {
-
+        //si no estoy escribiendo entonces cambiamos de frase
+        if(!escribiendo)
+        {
+            //cambiamos a la segunda frase
+            indiceFraseActual++;
+            //si aun me quedan frases por sacar, la escribo
+            if (indiceFraseActual < dialogoActual.frases.Length)
+            {
+                StartCoroutine(EscribirFrase());
+            }
+            else
+            {
+                FinalizarDialogo();
+            }
+        }
+        //si estamos escribiendo, que se complete la frase
+        else
+        {
+            CompletarFrase();
+        }
     }
 
     private void FinalizarDialogo()
     {
-
+        //descongelamos el tiempo
+        Time.timeScale = 1;
+        //quitamos el marco de dialogo de la vista, ya que ya hemos terminado la interaccion
+        marcoDialogo.SetActive(false);
+        //para que en posteriores interacciones, se empiece siempre desde el indice 0
+        indiceFraseActual = 0;
+        //dejamos de escribir
+        escribiendo = false;
+        //ya no etngo dialogo del que coger cosas para escribir
+        dialogoActual = null;
     }
 
 }

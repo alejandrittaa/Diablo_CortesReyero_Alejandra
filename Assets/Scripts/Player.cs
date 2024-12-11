@@ -19,7 +19,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Movimiento();
+        //si el tiempo esta descongelado, nos movemos, sino no
+        if (Time.timeScale == 1)
+        {
+            Movimiento();
+        }
         ComprobarInteraccion();
     }
 
