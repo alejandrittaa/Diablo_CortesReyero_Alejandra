@@ -3635,7 +3635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hi adventurer! Im so thrilled to welcome you to The Dungeon...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7111092698bff5a4a867212ad8d4c706, type: 2}
   m_sharedMaterial: {fileID: 4078674978747245556, guid: 7111092698bff5a4a867212ad8d4c706,

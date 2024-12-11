@@ -47,12 +47,22 @@ public class SistemaDialogo : MonoBehaviour
         //el diálogo actual que tenemos que tratar, es el que nos pasan por parámetro
         dialogoActual = dialogo;
         marcoDialogo.SetActive(true);
+        StartCoroutine(EscribirFrase());
     }
 
     //sirve para escribir la frase letra por letra
-    private void EscribirFrase()
+    private IEnumerator EscribirFrase()
     {
+        //demenuzo la frase actual en caracteres separados
+        char[] fraseEnLetras = dialogoActual.frases[indiceFraseActual].ToCharArray();
 
+        foreach(char letra in fraseEnLetras)
+        {
+            //1. Incluir la letra por la que estes pasando en el texto. (+=, para que se acumulen y no se sobre escribian)
+            textoDialogo.text += letra;
+            //2. Esperar 0.02sec
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 
     //sirve para autocompletar la frase
