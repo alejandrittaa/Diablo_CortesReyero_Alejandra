@@ -12,7 +12,8 @@ public class SistemaPatrulla : MonoBehaviour
     {
         foreach (Transform punto in ruta)
         {
-
+            //añado todos los puntos de ruta al listado
+            listadoPuntos.Add(punto);
         }
     }
 
