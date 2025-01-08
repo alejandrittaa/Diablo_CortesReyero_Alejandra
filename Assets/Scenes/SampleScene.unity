@@ -18025,6 +18025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ruta: {fileID: 1247432738}
+  agent: {fileID: 1069948180}
 --- !u!1001 &2107163829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19111,6 +19112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ruta: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!4 &1031632035858562034
 Transform:
   m_ObjectHideFlags: 0

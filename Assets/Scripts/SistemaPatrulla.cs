@@ -12,18 +12,17 @@ public class SistemaPatrulla : MonoBehaviour
 
     [SerializeField]private NavMeshAgent agent;
 
-    private List<Transform> listadoPuntos = new List<Transform>();
+    private List<Vector3> listadoPuntos = new List<Vector3>();
 
-    private int indiceDestinoActual = 0; //marca el punto del destino al que debo ir
-    private Transform  destinoActual; //marca la posición del destino al que debo ir 
+    private int indiceDestinoActual = -1; //marca el punto del destino al que debo ir
+    private Vector3 destinoActual; //marca la posición del destino al que debo ir 
 
     private void Awake() //funciona antes del start
     {
-        agent = GetComponent<NavMeshAgent>();
         foreach (Transform punto in ruta)
         {
             //añado todos los puntos de ruta al listado
-            listadoPuntos.Add(punto);
+            listadoPuntos.Add(punto.position);
         }
     }
 
@@ -38,8 +37,10 @@ public class SistemaPatrulla : MonoBehaviour
         while (true) 
         {
             CalcularDestino(); //tendré que calcular el destino.
-            agent.SetDestination(destinoActual.position); //Ir al destino
-            yield return new WaitForSeconds(5f); //tarda 5 segundos desde que empieza a andar para calcular el siguiente
+            agent.SetDestination(destinoActual); //Ir al destino
+            yield return new WaitUntil( () => agent.remainingDistance <= 0); //expresión LAMBDA = método anónimo
+            //|| espera hasta que se cumpla la condición para calcular el siguiente punto.
+            //lo anterior es, espera hasta que la distancia restante sea 0 para calcular el siguiente punto al que tienes que ir        
         }
     }
 
