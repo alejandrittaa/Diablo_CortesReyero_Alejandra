@@ -19092,6 +19092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652101362095}
   - component: {fileID: 919132147573627670}
+  - component: {fileID: 919132147573627671}
   m_Layer: 0
   m_Name: EnemigoVisual
   m_TagString: Untagged
@@ -19108,11 +19109,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132147573627669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53b86960a065c542a00607ec777b14d, type: 3}
+  m_Script: {fileID: 11500000, guid: 922cf8c38da96c242b41c8059cb8f15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ruta: {fileID: 0}
-  agent: {fileID: 0}
+  agent: {fileID: 1069948180}
+--- !u!95 &919132147573627671
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147573627669}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63ae2f0659fb1bf44963fdaf8b227d1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1031632035858562034
 Transform:
   m_ObjectHideFlags: 0
