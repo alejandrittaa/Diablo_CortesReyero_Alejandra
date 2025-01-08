@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class SistemaPatrulla : MonoBehaviour
 {
@@ -40,7 +39,10 @@ public class SistemaPatrulla : MonoBehaviour
             agent.SetDestination(destinoActual); //Ir al destino
             yield return new WaitUntil( () => agent.remainingDistance <= 0); //expresión LAMBDA = método anónimo
             //|| espera hasta que se cumpla la condición para calcular el siguiente punto.
-            //lo anterior es, espera hasta que la distancia restante sea 0 para calcular el siguiente punto al que tienes que ir        
+            //lo anterior es, espera hasta que la distancia restante sea 0 para calcular el siguiente punto al que tienes que ir
+
+            //que espere entre 0.5 y 3 segundos hasta avanzar al siguiente punto de manera aleatoria
+            yield return new WaitForSeconds(UnityEngine.Random.Range(0.25f, 3f));
         }
     }
 
