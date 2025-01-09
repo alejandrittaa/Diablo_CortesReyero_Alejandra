@@ -67,6 +67,8 @@ public class SistemaPatrulla : MonoBehaviour
     {
         if(other.CompareTag("Player")) //si detecta al player...
         {
+            StopAllCoroutines(); //abandonamos la corrutina de patrulla
+
             //activamos el combate, desactivamos la patrulla y le pasamos a quien tiene que perseguir
             main.ActivarCombate(other.transform);
         }
