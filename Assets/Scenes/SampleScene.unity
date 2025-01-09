@@ -881,6 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: {fileID: 1069948181}
   agent: {fileID: 1069948180}
+  velocidadCombate: 4
 --- !u!1001 &98632149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18085,6 +18086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b86960a065c542a00607ec777b14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadPatrulla: 2.5
   main: {fileID: 1069948181}
   ruta: {fileID: 1247432738}
   agent: {fileID: 1069948180}

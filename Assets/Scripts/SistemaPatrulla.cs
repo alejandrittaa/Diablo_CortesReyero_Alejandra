@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class SistemaPatrulla : MonoBehaviour
 {
+    [SerializeField] private float velocidadPatrulla;
     //cuando nace el sistema patrulla, le indica al 
     [SerializeField] private Enemigo main;
 
@@ -27,6 +28,11 @@ public class SistemaPatrulla : MonoBehaviour
             //añado todos los puntos de ruta al listado
             listadoPuntos.Add(punto.position);
         }
+    }
+
+    private void OnEnable() //cuando se enciende la patrulla, establecemos velocidad patrulla
+    {
+        agent.speed = velocidadPatrulla;
     }
 
     void Start()
