@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class SistemaPatrulla : MonoBehaviour
 {
+    //cuando nace el sistema patrulla, le indica al 
+    [SerializeField] private Enemigo main;
 
     [SerializeField] private Transform ruta;
 
@@ -18,6 +20,8 @@ public class SistemaPatrulla : MonoBehaviour
 
     private void Awake() //funciona antes del start
     {
+        //le digo al main (sccript enemigo), que el sistema de patrulla que tiene soy yo (this)
+        main.Patrulla = this;
         foreach (Transform punto in ruta)
         {
             //añado todos los puntos de ruta al listado
@@ -38,7 +42,7 @@ public class SistemaPatrulla : MonoBehaviour
             CalcularDestino(); //tendré que calcular el destino.
             agent.SetDestination(destinoActual); //Ir al destino
             yield return new WaitUntil( () => agent.remainingDistance <= 0); //expresión LAMBDA = método anónimo
-            //|| espera hasta que se cumpla la condición para calcular el siguiente punto.
+            //espera hasta que se cumpla la condición para calcular el siguiente punto.
             //lo anterior es, espera hasta que la distancia restante sea 0 para calcular el siguiente punto al que tienes que ir
 
             //que espere entre 0.5 y 3 segundos hasta avanzar al siguiente punto de manera aleatoria
@@ -57,5 +61,14 @@ public class SistemaPatrulla : MonoBehaviour
 
         //mi destino dentro del listado de puntos, es aquel con el nuevo indice que acabamos de calcular (lo del if anterior)
         destinoActual = listadoPuntos[indiceDestinoActual];
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player")) //si detecta al player...
+        {
+            //activamos el combate, desactivamos la patrulla y le pasamos a quien tiene que perseguir
+            main.ActivarCombate(other.transform);
+        }
     }
 }

@@ -835,6 +835,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 89020214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &93736811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93736812}
+  - component: {fileID: 93736813}
+  m_Layer: 0
+  m_Name: SistemaCombate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93736812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93736811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1069948179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &93736813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93736811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140c88402321f224fbf094edf50a80a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1069948181}
+  agent: {fileID: 0}
 --- !u!1001 &98632149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9959,6 +10005,7 @@ GameObject:
   - component: {fileID: 1069948179}
   - component: {fileID: 1069948178}
   - component: {fileID: 1069948180}
+  - component: {fileID: 1069948181}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Untagged
@@ -10003,6 +10050,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2106727361}
+  - {fileID: 93736812}
   - {fileID: 543450652101362095}
   - {fileID: 446589426}
   - {fileID: 1247432738}
@@ -10030,6 +10078,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1069948181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069948177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1a7913e0393454e9daa728bbb8032d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1072761873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17990,6 +18050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106727361}
   - component: {fileID: 2106727362}
+  - component: {fileID: 2106727363}
   m_Layer: 0
   m_Name: SistemaPatrulla
   m_TagString: Untagged
@@ -18024,8 +18085,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b86960a065c542a00607ec777b14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main: {fileID: 1069948181}
   ruta: {fileID: 1247432738}
   agent: {fileID: 1069948180}
+--- !u!135 &2106727363
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106727360}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 7
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2107163829
 PrefabInstance:
   m_ObjectHideFlags: 0
