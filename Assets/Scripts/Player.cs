@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -68,5 +69,10 @@ public class Player : MonoBehaviour
         {
             agent.stoppingDistance = 0f;
         }
+    }
+
+    public void HacerDanho(float danhoAtaque)
+    {
+        Debug.Log("Me hacen daño (player): " + danhoAtaque);
     }
 }

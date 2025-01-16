@@ -30,14 +30,16 @@ public class SistemaPatrulla : MonoBehaviour
         }
     }
 
-    private void OnEnable() //cuando se enciende la patrulla, establecemos velocidad patrulla
+    private void OnEnable() //cuando se enciende la patrulla...
     {
-        agent.speed = velocidadPatrulla;
+        agent.stoppingDistance = 0; // el stopping distance vuelve a ser cero
+        agent.speed = velocidadPatrulla; //volvemos  a la velocidad de patrulla
+        StartCoroutine(PatrullaryEsperar()); //inicializamos la corrutina
     }
 
     void Start()
     {
-        StartCoroutine(PatrullaryEsperar()); //inicializamos la corrutina
+        
     }
 
     private IEnumerator PatrullaryEsperar() //corrutina, ejecución en paralelo al update
