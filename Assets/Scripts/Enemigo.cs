@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
@@ -15,6 +16,11 @@ public class Enemigo : MonoBehaviour
     public SistemaCombate Combate { get => combate; set => combate = value; }
     public Transform Targetglobal { get => targetGlobal; set => targetGlobal = value; }
 
+    private void Start()
+    {
+        //activamos la patrulla al empezar el juego
+        patrulla.enabled = true;
+    }
     public void ActivarCombate(Transform targetLocal)
     {
         //desactivamos patrulla
@@ -25,10 +31,14 @@ public class Enemigo : MonoBehaviour
         targetGlobal = targetLocal;
     }
 
-    void Start()
+    internal void ActivarPatrulla()
     {
-        
+        //desactivamos el script de combate
+        combate.enabled = false;
+        //activamos el script de patrulla
+        patrulla.enabled = true;
     }
+
 
 
     void Update()
