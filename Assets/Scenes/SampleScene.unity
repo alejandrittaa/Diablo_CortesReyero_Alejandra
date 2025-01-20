@@ -17644,7 +17644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -17710,8 +17710,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 11.64
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -23854,6 +23854,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 2014261217}
+  - {fileID: 1979355418}
   - {fileID: 832575519}
   - {fileID: 8212161858927894578}
   - {fileID: 1092763377}
@@ -23865,4 +23866,3 @@ SceneRoots:
   - {fileID: 1589206292}
   - {fileID: 2020156760}
   - {fileID: 1069948179}
-  - {fileID: 1979355418}
