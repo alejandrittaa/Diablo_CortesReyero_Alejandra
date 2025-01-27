@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SistemaDialogo : MonoBehaviour
 {
-
+    [SerializeField] private EventManagerSO eventManager; //cogemos el event manager
     [SerializeField] private GameObject marcoDialogo; //marco a habilitar/deshabilitar
     [SerializeField] private TMP_Text textoDialogo; //dialogos como tal
     [SerializeField] private Transform npcCamera; // Cámara compartida por todos los nps
@@ -122,6 +122,13 @@ public class SistemaDialogo : MonoBehaviour
         indiceFraseActual = 0;
         //dejamos de escribir
         escribiendo = false;
+
+        //comprobamos si tiene mision, para saber si hay que activar un toggle o no
+        if(dialogoActual.tieneMision)
+        {
+            eventManager.NuevaMision(dialogoActual.mision);
+        }
+
         //ya no etngo dialogo del que coger cosas para escribir
         dialogoActual = null;
     }

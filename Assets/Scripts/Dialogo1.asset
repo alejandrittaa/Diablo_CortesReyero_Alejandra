@@ -17,3 +17,5 @@ MonoBehaviour:
   - Necesito que me hagas un favor.
   - "Recoge 3 setas de la muerte para m\xED, te recompensar\xE9 por ello."
   tiempoEntreLetras: 0.02
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: ebc7a85c1a09f37458c82ad47f44d5f9, type: 2}
