@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     private void ComprobarInteraccion()
     {
         //si el ultimo click que hice fue en el npc...
-        if(ultimoClick != null && ultimoClick.TryGetComponent(out NPC npc))
+        if(ultimoClick != null && ultimoClick.TryGetComponent(out IInteractuable inte))
         {
             //actualizamos la distancia de parada para no superponernos al npc
             agent.stoppingDistance = 2f; 
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
             if(!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
                 //si hemos llegado, llamamos al metodo interacción de dentro del npc (se le mete el transform del player por parametro de entrada)
-                npc.Interactuar(this.transform);
+                inte.Interactuar(this.transform);
                 //cuando ya has llegado, qutiamos el ultimo click que teniamos guardado, para solo interactuar una vez
                 ultimoClick = null;
             }

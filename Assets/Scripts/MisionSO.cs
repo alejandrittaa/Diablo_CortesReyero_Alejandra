@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class MisionSO : ScriptableObject
     public int totalRepeticiones; //veces que tengo que repetir ese paso
     public int indiceMision; //numero de la mision (índice único que representa cada misión)
 
+    [NonSerialized] //para que el valor del campo se resetee entre partidas
     public int repeticionActual; //la vez concreta en la que estas haciendo la repetición (el avance de misión que llevas)
 
 }
