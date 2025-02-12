@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo2
   m_EditorClassIdentifier: 
   frases:
-  - Gracias por las setas de la muerte
+  - "Gracias por las setas de la muerte, har\xE9 un caldo para matar a toda mi familia"
   tiempoEntreLetras: 0
   tieneMision: 0
   mision: {fileID: 11400000, guid: ebc7a85c1a09f37458c82ad47f44d5f9, type: 2}
