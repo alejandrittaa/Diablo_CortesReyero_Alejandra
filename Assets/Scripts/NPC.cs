@@ -13,6 +13,8 @@ public class NPC : MonoBehaviour, IInteractuable
     [SerializeField] private EventManagerSO eventManager;
     [SerializeField] private MisionSO miMision; //mision asociada al npc
 
+    public GameUIManager uiManager;
+
     private void Awake()
     {
         dialogoActual = dialogo1;
@@ -28,6 +30,7 @@ public class NPC : MonoBehaviour, IInteractuable
         if(miMision == misionTerminada)
         {
             dialogoActual = dialogo2;
+
         }
     }
 
@@ -48,4 +51,6 @@ public class NPC : MonoBehaviour, IInteractuable
     {
         eventManager.OnTerminarMision -= CambiarDialogo; //nos desuscribimos, para que no se congele el juego ni de error
     }
+
+
 }
